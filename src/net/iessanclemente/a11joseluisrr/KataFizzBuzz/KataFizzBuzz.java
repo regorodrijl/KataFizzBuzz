@@ -16,7 +16,8 @@ public class KataFizzBuzz {
 	 * divisible por 3 y 5 para devolcer FIZZ en el caso de 3 y BUZ en el caso
 	 * de 5, si es divisible por ambos devuelve FIZZBUZZ.
 	 * 
-	 * @param numero   String que contiene lo que es introducido, devulve dicho
+	 * @param numero
+	 *            String que contiene lo que es introducido, devulve dicho
 	 *            numero parseado.
 	 *
 	 */
@@ -26,10 +27,12 @@ public class KataFizzBuzz {
 		if (numero == 0) {
 			return "0";
 		} else {
-			if (numero == 3) {
-				
-				return "Fizz";
-			}else
+			if (numero == 3 || numero == 5) {
+				if (numero == 3) {
+					return "Fizz";
+				} else
+					return "Buzz";
+			} else
 				return String.valueOf(numero);
 		}
 	}
