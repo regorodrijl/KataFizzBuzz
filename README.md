@@ -1,4 +1,7 @@
 # KataFizzBuzz
+Autor: Jose Luis Rego Rodríguez (regorodrijl)
+Fecha Realización: 13-05-16
+
 **Kata FizzBuzz:**
 
 *Imagínate el siguiente escenario:*
