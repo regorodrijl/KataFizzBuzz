@@ -2,14 +2,35 @@ package net.iessanclemente.a11joseluisrr.KataFizzBuzz;
 
 public class KataFizzBuzz {
 
-	public int number(String numero) {
+	public static void main(String args) {
+		String res = "";
+
+		for (int i = 0; i < 100; i++) {
+			res = number(i);
+			System.out.println(res);
+		}
+	}
+
+	/**
+	 * number() Introduce un numero y comprueba si es null o no, tambien si es
+	 * divisible por 3 y 5 para devolcer FIZZ en el caso de 3 y BUZ en el caso
+	 * de 5, si es divisible por ambos devuelve FIZZBUZZ.
+	 * 
+	 * @param numero   String que contiene lo que es introducido, devulve dicho
+	 *            numero parseado.
+	 *
+	 */
+	public static String number(int numero) {
 		// TODO Auto-generated method stub
 
-		if (numero == null || numero == "") {
-			return 0;
+		if (numero == 0) {
+			return "0";
 		} else {
-			int n = Integer.parseInt(numero);
-			return n;
+			if (numero == 3) {
+				
+				return "Fizz";
+			}else
+				return String.valueOf(numero);
 		}
 	}
 
