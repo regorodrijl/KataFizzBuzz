@@ -2,11 +2,15 @@ package net.iessanclemente.a11joseluisrr.KataFizzBuzz;
 
 public class KataFizzBuzz {
 
-	public int number(String txt) {
+	public int number(String numero) {
 		// TODO Auto-generated method stub
-		return 0;
+
+		if (numero == null || numero == "") {
+			return 0;
+		} else {
+			int n = Integer.parseInt(numero);
+			return n;
+		}
 	}
 
-	
-	
 }
