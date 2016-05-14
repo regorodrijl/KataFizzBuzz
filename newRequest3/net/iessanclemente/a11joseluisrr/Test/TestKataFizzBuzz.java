@@ -92,11 +92,11 @@ public class TestKataFizzBuzz {
 	/**
 	 * testRequest3esDivisiblePor3Ytiene3DevueveFizz
 	 * Un número es Fizz si es divisible por 3 o si incluye un 3 en el número
-	 * comprobado con el numero 33 y el 4356 por cercionarme.
+	 * comprobado con el numero 33, 13 y el 4356 por cercionarme.
 	 */
 	@Test
 	public void testRequest3esDivisiblePor3Ytiene3DevueveFizz() {
-		String returnFizz = fb.request3(4356); // probado con 33
+		String returnFizz = fb.number(13); // probado con 33
 		assertEquals("Fizz", returnFizz);
 	}
 }

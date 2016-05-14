@@ -9,7 +9,7 @@ public class KataFizzBuzz {
 			res = number(i);
 			System.out.println(res);
 		}
-	}
+	}// fin main
 
 	/**
 	 * number() Introduce un numero y comprueba si es null o no, tambien si es
@@ -30,6 +30,31 @@ public class KataFizzBuzz {
 			if (numero % 3 == 0 && numero % 5 == 0) {
 				return "FizzBuzz";
 			} else {
+				/**
+				 * Requerimiento 1: -Un número es Fizz si es divisible por 3 o
+				 * si incluye un 3 en el número.
+				 */
+				// variable Boobleana para controlar si esta el numero
+				Boolean elNumeroEsta = false;
+
+				// paso el numero entero a String
+				String n = Integer.toString(numero);
+				// lo introduzco en un Array
+				int[] array = new int[n.length()];
+
+				for (int i = 0; i < n.length(); i++) {
+					// forzamos conversion de char a int para luego
+					// comprobar por int.
+					array[i] = n.charAt(i) - '0';
+				}
+				// recoremos el array para ver si esta el numero 3.
+				for (int x = 0; x < array.length; x++) {
+					// si esta
+					if (3 == array[x]) {
+						elNumeroEsta = true;
+						return "Fizz";
+					}
+				}
 				if (numero % 3 == 0) {
 					return "Fizz";
 				}
@@ -37,40 +62,7 @@ public class KataFizzBuzz {
 					return "Buzz";
 				} else
 					return String.valueOf(numero);
-			}
-		}
+			} // fin else2
+		} // fin else1
 	} // fin numero()
-	
-	/**
-	 * Requerimiento 1: -Un número es Fizz si es divisible por 3 o si incluye un
-	 * 3 en el número.
-	 * 
-	 */
-	public static String request3(int n) {
-		// variable Boobleana para controlar si esta el numero
-		Boolean elNumeroEsta = false;
-		
-		// paso el numero entero a String
-		String numero = Integer.toString(n);
-		// lo introduzco en un Array 
-		int[] array = new int[numero.length()];
-		
-		for (int i = 0; i < numero.length(); i++) {
-			// forzamos conversion de char a int para luego comprobar por int.
-			array[i] = numero.charAt(i) - '0';
-		}
-		// recoremos el array para ver si esta el numero 3.
-		for (int x = 0; x < array.length; x++) {
-			// si esta
-			if (3 == array[x]) {
-				elNumeroEsta = true;
-			}
-		}
-
-		if (elNumeroEsta == true) {
-			return "Fizz";
-		}else
-			return "No tiene numero";
-
-	}// fin request3
 }
