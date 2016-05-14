@@ -27,8 +27,8 @@ public class KataFizzBuzz {
 		if (numero == 0) {
 			return "0";
 		} else {
-			if (numero == 3 || numero == 5) {
-				if (numero == 3) {
+			if (numero % 3 == 0 || numero == 5) {
+				if (numero % 3 == 0) {
 					return "Fizz";
 				} else
 					return "Buzz";
