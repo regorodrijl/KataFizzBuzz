@@ -35,7 +35,8 @@ public class KataFizzBuzz {
 				 * si incluye un 3 en el número.
 				 */
 				// variable Boobleana para controlar si esta el numero
-				Boolean elNumeroEsta = false;
+				Boolean elNumero3Esta = false;
+				Boolean elNumero5Esta = false;
 
 				// paso el numero entero a String
 				String n = Integer.toString(numero);
@@ -47,12 +48,18 @@ public class KataFizzBuzz {
 					// comprobar por int.
 					array[i] = n.charAt(i) - '0';
 				}
-				// recoremos el array para ver si esta el numero 3.
+				// recoremos el array para ver si esta el numero 3 o 5.
 				for (int x = 0; x < array.length; x++) {
-					// si esta
+					// si esta el 3
 					if (3 == array[x]) {
-						elNumeroEsta = true;
+						elNumero3Esta = true;
 						return "Fizz";
+					} else {
+						// si esta el 5
+						if (5 == array[x]) {
+							elNumero5Esta = true;
+							return "Buzz";
+						}
 					}
 				}
 				if (numero % 3 == 0) {
