@@ -27,14 +27,18 @@ public class KataFizzBuzz {
 		if (numero == 0) {
 			return "0";
 		} else {
-			if (numero % 3 == 0 || numero % 5==0) {
+			if (numero % 3 == 0 && numero % 5 == 0) {
+				return "FizzBuzz";
+			} else {
 				if (numero % 3 == 0) {
 					return "Fizz";
-				} else
+				}
+				if (numero % 5 == 0) {
 					return "Buzz";
-			} else
-				return String.valueOf(numero);
+				} else
+					return String.valueOf(numero);
+			}
 		}
-	}
+	} // fin numero()
 
 }
