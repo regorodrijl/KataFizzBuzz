@@ -60,11 +60,21 @@ public class TestKataFizzBuzz {
 
 	/**
 	 * testIntroducirNumeroDivisiblePorTresDevuelveFizz
-	 * Introducir un numero divisible por 3 devuelve 3
+	 * Introducir un numero divisible por 3 devuelve Fizz
 	 */
 	@Test
 	public void testIntroducirNumeroDivisiblePorTresDevuelveFizz() {
 		String returnFizz = fb.number(45);
 		assertEquals("Fizz", returnFizz);
+	}
+	
+	/**
+	 * testIntroducirNumeroDivisiblePorTresDevuelveFizz
+	 * Introducir un numero divisible por 5 devuelve Buzz
+	 */
+	@Test
+	public void testIntroducirNumeroDivisiblePorCincoDevuelveBuzz() {
+		String returnBuzz = fb.number(10);
+		assertEquals("Buzz", returnBuzz);
 	}
 }
