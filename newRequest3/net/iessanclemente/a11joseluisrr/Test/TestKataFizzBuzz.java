@@ -1,6 +1,6 @@
 package net.iessanclemente.a11joseluisrr.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +15,7 @@ public class TestKataFizzBuzz {
 	@Before
 	public void setUp() throws Exception {
 		fb = new KataFizzBuzz();
+		//r3 = new newRequest3();
 	}
 
 	/**
@@ -86,5 +87,16 @@ public class TestKataFizzBuzz {
 	public void testIntroducirNumeroDivisiblePorTresYCincoDevuelveFizzBuzz() {
 		String returnFizzBuzz = fb.number(15);
 		assertEquals("FizzBuzz", returnFizzBuzz);
+	}
+
+	/**
+	 * testRequest3esDivisiblePor3Ytiene3DevueveFizz
+	 * Un número es Fizz si es divisible por 3 o si incluye un 3 en el número
+	 * comprobado con el numero 33 y el 4356 por cercionarme.
+	 */
+	@Test
+	public void testRequest3esDivisiblePor3Ytiene3DevueveFizz() {
+		String returnFizz = fb.request3(4356); // probado con 33
+		assertEquals("Fizz", returnFizz);
 	}
 }
