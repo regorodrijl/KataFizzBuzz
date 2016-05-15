@@ -106,7 +106,17 @@ public class TestKataFizzBuzz {
 	 */
 	@Test
 	public void testRequest5esDivisiblePor5oTiene5DevueveBuezz() {
-		String returnBuzz = fb.number(53);
+		String returnBuzz = fb.number(52);
 		assertEquals("Buzz", returnBuzz);
+	}
+	
+	/**
+	 * testRequest5Ytiene3 
+	 * Si se introduce un numero que tenga tanto el 3 como el 5
+	 */
+	@Test
+	public void testRequest5Ytiene3() {
+		String returnBuzz = fb.number(523);
+		assertEquals("los2", returnBuzz);
 	}
 }

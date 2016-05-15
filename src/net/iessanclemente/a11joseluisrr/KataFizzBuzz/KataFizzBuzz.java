@@ -53,19 +53,22 @@ public class KataFizzBuzz {
 					// si esta el 3
 					if (3 == array[x]) {
 						elNumero3Esta = true;
-						return "Fizz";
+						//return "Fizz";
 					} else {
 						// si esta el 5
 						if (5 == array[x]) {
 							elNumero5Esta = true;
-							return "Buzz";
+							//return "Buzz";
 						}
 					}
 				}
-				if (numero % 3 == 0) {
+				if(elNumero3Esta && elNumero5Esta){
+					return "los2";
+				}
+				if (numero % 3 == 0 || elNumero3Esta==true ) {
 					return "Fizz";
 				}
-				if (numero % 5 == 0) {
+				if (numero % 5 == 0 || elNumero5Esta==true) {
 					return "Buzz";
 				} else
 					return String.valueOf(numero);
